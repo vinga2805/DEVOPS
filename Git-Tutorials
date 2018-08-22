@@ -1,0 +1,179 @@
+
+1.Installing GIT.
+==================
+
+# Version Git:
+git --version
+
+# git help
+
+git help
+git help commit---->(example)
+
+2.Git configuration and settings.
+=================================
+
+# Adding username in git settings.
+
+git config --global user.name "Vishal Ingale"
+
+# Adding Email address in the git settings.
+
+git config --global user.email "vishalonwork@gmail.com"
+
+# Check already existing settings.
+
+git config --list
+
+# If you want to know the specific setting.
+
+git config user.name
+
+3.Creating first git repository
+=================================
+
+mkdir myproject
+cd myproject
+
+#Initialize a folder to act as a repository
+
+git init
+
+4.Committing changes.
+============================
+
+# Adding all changes made in the repository.
+git add .
+
+# Commit is like taking a snapshot of the repository at that moment of time.
+# This will help us to come back to this stage if anything goes wrong in future.
+# git will only track those code which are committed.
+
+git commit -m "message"
+
+
+5.Adding Files and commit logs.
+=================================
+
+# Total commit history.
+git log
+
+# Viewing commit from a specific person.
+
+git log --author="Vishal"
+
+# To see the changes which have not been committed.
+
+git status (It compares the working directory with repository and staging area.)
+
+6. Git workflow.
+===================================
+# workflow is a 2 way process
+
+working copy ===> Staging Area ====> repository
+
+1.Adding the file in staging area
+
+git add .
+
+2.Committing in the repository.
+
+git commit -m "message"
+
+7. Viewing changes made.(In one file and many files)
+=======================================
+
+1.Change the content of the file and then run below command.
+
+git status
+
+
+2.Want to know what changes have been made.(compares working copy and repository copy)
+
+git diff
+
+8. Comparing staging area and repository.
+=========================================
+
+# Viewing changes in staging area which are not committed yet in repository.
+
+git diff --staged
+
+
+9. Deleting files.
+=========================================
+
+# Removing files from repository and working directory.
+
+git rm <file_name>
+
+# check status
+
+git status
+
+# Once the file is removed its advised to take a snapshot by following command.
+
+git commit -m "Deleted <file_name>"
+
+
+10. Move and rename files in git
+=====================================
+
+# Once the file is renamed git would delete the old file and insert the new file.
+
+verify :
+========
+
+git status
+
+
+# Once you add the file in staging area it says the file is going to be renamed.
+
+git add .
+
+git status
+
+# git way to rename or move file .
+
+git mv <old_file_name> <new_file_name>
+
+# Move file in different folder.
+
+git mv <file_name> <folder_name>/
+
+# Move file in a different folder and rename it.
+
+git mv <file_name> <folder_name>/<new_file_name>
+
+
+11. Committing directly to repository.
+=================================================
+
+# Commit the changes without adding it in staging area.
+
+git commit -am "Message"
+
+Note :
+
+1.This command will push all files in the repository even if u make changes in a single file.
+So, Be aware of it.
+2.Do not use this command if you are deleting or renaming or moving files in local repository.
+
+
+12. Undo changes via git
+===========================
+
+# Undo changes from repository to working directory
+
+git checkout -- <file_name>s
+
+
+# Undo changes from staging area to working directory.
+
+git reset HEAD <file_name>
+
+NOTE:
+
+The reset command (default) does not change the working directory.
+Therefore, the working directory still contains unwanted comments.
+We can use the checkout command from the previous example to remove unwanted changes from working directory.
