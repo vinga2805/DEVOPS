@@ -229,9 +229,7 @@ git clone https://github.com/vinga2805/myproject.git
 # issues/Labels
 # Orgainzations/Teams/Members
 
-
-
-Gitignore:
+15. Gitignore:
 ===========================
 
 # create .gitignore file in the repository and add any file which do not want to make public
@@ -241,3 +239,55 @@ vi .gitignore
 add any file which you want to ignore and save.
 
 Now once you push the code you will observe the file inside gitignore is not visible in github.
+
+16. Branching:
+==========================
+
+#Create branch in github
+
+git branch new_branch
+
+# list the available branches
+
+git branch
+
+
+#Switch between branches
+
+git checkout branch
+
+
+# Creating new branch and switching to the same in a command
+
+git checkout -b new_branch
+
+
+# Deleting the branch
+
+Note: First you need to come out of the branch which you are going to delete.
+
+git branch
+
+git checkout master
+
+git branch -D <new_branch>
+
+
+# Rename the branch.
+
+git branch -m <old_branch_name> <new_branch_name>
+
+# Pushing the code to new branch.
+
+git push origin <new_branch>
+
+
+# Merge new_branch to master.
+
+git branch
+
+git checkout master
+
+git merge origin/<new_branch>
+
+git push origin master
