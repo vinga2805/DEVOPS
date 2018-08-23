@@ -177,3 +177,43 @@ NOTE:
 The reset command (default) does not change the working directory.
 Therefore, the working directory still contains unwanted comments.
 We can use the checkout command from the previous example to remove unwanted changes from working directory.
+
+13. Getting old version from repository
+==============================================
+
+# roll back changes to point in time then you can do that by below command.
+
+git checkout "commit_id" -- <file-name>
+
+# You can get commit id from below command.
+
+git log
+
+
+14. Github
+============================
+
+# Create account in Github.
+# create public repository.
+
+# Adding remote github url in the repository
+
+git remote add "NickName" <url>
+
+# Check remote repository in git.
+
+git remote
+
+
+Steps to push local repository to github
+=======================================
+
+1. Create folder.
+mkdir myproject
+cd myproject
+vi index.html(Add some data and save)
+git Init
+git add .
+git commit -m "First commit"
+git remote add githubrepo <url of github repo>
+git push -u origin master
