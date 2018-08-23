@@ -217,3 +217,27 @@ git add .
 git commit -m "First commit"
 git remote add githubrepo <url of github repo>
 git push -u origin master
+
+
+command to clone github repository to local repo.
+=================================================
+
+git clone https://github.com/vinga2805/myproject.git
+
+
+# watch/star/fork
+# issues/Labels
+# Orgainzations/Teams/Members
+
+
+
+Gitignore:
+===========================
+
+# create .gitignore file in the repository and add any file which do not want to make public
+example: If you have any password in the file you can add that file in .gitignore which will not be visible for everyone.
+
+vi .gitignore
+add any file which you want to ignore and save.
+
+Now once you push the code you will observe the file inside gitignore is not visible in github.
